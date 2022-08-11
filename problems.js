@@ -779,7 +779,7 @@ var friend = bestFriend(myfriends);
 // console.log(friend);
 
 // আরেকটা ফাংশন লিখবে যেটার নাম লিখবে। যেই ফাংশনের নাম হবে paperRequirements এই ফাংশনের প্যারামিটার হিসেবে তিনটা প্যারামিটার হবে। প্রথম প্যারামিটার হবে তুমি প্রথম বই কত কপি ছাপাতে চাও। সেকেন্ড প্যারামিটার হবে তুমি সেকেন্ড বই কত কপি ছাপাতে চাও। আর থার্ড প্যারামিটার হবে তুমি থার্ড বই কত কপি ছাপাতে চাও। অর্থাৎ কোন বই এর কত কপি ছাপানো হবে সেটাই প্যারামিটার হিসেবে নিবে। 
-function paperRequirements(book1, book2, book3){
+function paperRequirements(book1, book2, book3) {
     let book1page = 100;
     let book2page = 200;
     let book3page = 300
@@ -795,15 +795,14 @@ const bookpages = paperRequirements(5, 6, 7);
 // console.log(bookpages);
 
 //এইটা একটু ট্রিকি হতে পারে। একটা array এর মধ্যে অনেকগুলা সংখ্যা থাকবে। তোমার কাজ হচ্ছে সংখ্যা গুলা একটার পর একটা করে চেক করা। এবং সংখ্যা গুলা যদি পজিটিভ সংখ্যা হয়। অর্থাৎ শূন্য বা শূন্যের চাইতে বড় হয় তাহলে সেগুলাকে কোন একটা array এর মধ্যে রাখবে। আর যদি নেগেটিভ সংখ্যা হয়। তাহলে লুপটা স্টপ করে দিবে। এবং লুপ বন্ধ করার আগ পর্যন্ত যতগুলা পজিটিভ সংখ্যা পাওয়া গেছে। সেগুলা রিটার্ন করে দিবে। 
-function PositiveNumber(numberarr){
+function PositiveNumber(numberarr) {
     // let positive = numberarr[0];
     let positive = [];
-    for(let i = 0; i < numberarr.length; i++){
-    let element = numberarr[i];
-        if(element >= 0){
+    for (let i = 0; i < numberarr.length; i++) {
+        let element = numberarr[i];
+        if (element >= 0) {
             positive.push(element);
-        }
-        else{
+        } else {
             break;
         }
     }
@@ -816,9 +815,9 @@ const PositiveN = PositiveNumber(numberarr);
 
 //তোমাকে যদি বলে একটা while লুপ দিয়ে ৭ থেকে ১৯ পর্যন্ত যতগুলা বিজোড় সংখ্যা আছে সেগুলা দেখাতে। তুমি কি সেটা দেখাতে পারবে? পারলে সেই কোড লিখে ফেলো। 
 var i = 7;
-while(i <= 19){
+while (i <= 19) {
     // console.log(i);
-    i+=2;
+    i += 2;
 }
 
 //তোমাকে যদি বলা হয় তুমি একটা array ডিক্লেয়ার করবে। এবং সেটার মধ্যে কয়টা উপাদান আছে সেটা বের করবে হবে। সেই array এর এর মধ্যে চতুর্থ পজিশন এর উপাদান চেইঞ্জ করতে হবে। array এর মধ্যে দুইটা উপাদান যোগ করতে হবে। এবং একটা উপাদান কে বের করে দিতে হবে। তুমি কি সেটা করতে পারবে।
@@ -830,16 +829,16 @@ fames.pop();
 
 //তুমি কি একটা ফর লুপ দিয়ে কোন একটা array এর সবগুলা উপাদানকে দেখাতে পারবে। সেটা রেগুলার for লুপ হোক বা for of হোক। হলে সেই স্টাইলে একটা কোড লিখে ফেলো। 
 let myarr = ['kodu', 'modu', 'jodu', 85, 86, 99];
-for(i = 0; i < myarr.length; i++){
-    let marr =myarr[i]
+for (i = 0; i < myarr.length; i++) {
+    let marr = myarr[i]
     // console.log(marr);
 }
 
 // তোমাকে যদি বলা হয়। একটা array এর মধ্যে ৮০ এর চাইতে বড় সংখ্যা থাকলে সেগুলাকে console log করে দেখাতে সেটা কি তুমি পারবে? তাহলে তুমি সেই কোড করে ফেলো
-function mn(mnum){
-    for(let i = 0; i < mnum.length; i++){
+function mn(mnum) {
+    for (let i = 0; i < mnum.length; i++) {
         let mnm = mnum[i];
-        if(mnm > 80){
+        if (mnm > 80) {
             // console.log(mnm);
         }
     }
@@ -849,11 +848,93 @@ mn(mnum);
 
 
 // /একটা অবজেক্ট ডিক্লেয়ার করবে। সেটাতে তিনটা প্রপার্টি থাকবে। এবং কোন একটা প্রোপার্টি এর মান চেইঞ্জ করবা।
-let fvrtsingers = [
-    {name :'Niall Horan',
-    Active : 2019,
+let fvrtsingers = [{
+    name: 'Niall Horan',
+    Active: 2019,
     Label: 'Capitol Records',
-    }
-]
+}]
 fvrtsingers.Label = 'Warner Music Records';
-// console.log(fvrtsingers);
+// console.log(fvrtsingers); 
+
+//RadianToDegree
+
+function radianToDegree(radian) {
+    if (typeof radian == 'number') {
+        let radiantodegree = radian * 180 / Math.PI;
+        let degree = radiantodegree.toFixed(2);
+        return degree;
+    } 
+    else {
+        return 'Please Enter Radian Number';
+    }
+}
+// console.log(radianToDegree(199));
+
+//Calculate the total that i have to pay
+function oilPrice(dissel, petrol, octane) {
+    if (typeof dissel !== 'number' && typeof petrol !== 'number' && typeof octane !== 'number') {
+        return 'Please Enter Dissel, petrol, Octane Liter';
+    } 
+    else {
+        let disselPerLiter = 114;
+        let petrolPerLiter = 130;
+        let octanePerLiter = 135;
+
+        let disselPrice = disselPerLiter * dissel;
+        let petrolPrice = petrolPerLiter * petrol;
+        let octanePrice = octanePerLiter * octane;
+
+        let totaloilPrice = disselPrice + petrolPrice + octanePrice;
+        return totaloilPrice;
+    }
+}
+// console.log(oilPrice(0, 2, 3));
+
+//check the given fule name is js or not
+function isJavaScriptFile(File){
+    if(typeof File !== 'string'){
+        return 'Please Type Valid File'
+    }
+    else if (File.endsWith('.js')) {
+        return true;
+    } 
+    else {
+        return false;
+    }
+}
+// console.log(isJavaScriptFile('image.jpg.js'));
+
+let FriendOne = {name: 'abul',friend: 'alex'}
+let FriendTwo = {name: 'jon',friend: 'joe'}
+
+function isBestFriend(FriendOne, FriendTwo) { 
+    if(typeof FriendOne.name !== 'string' && typeof FriendTwo.friend !== 'string' && FriendOne.friend !== 'string' && FriendTwo.name !== 'string'){
+        return 'Please Enter Valid Name';
+
+    }
+    else if(FriendOne.name == FriendTwo.friend && FriendTwo.name == FriendOne.friend) {
+        return true;
+    } 
+    else{
+        return false;
+    }
+}
+// console.log(isBestFriend(FriendOne, FriendTwo));
+
+function publicBusFare(TotalPublic) {
+    if (typeof TotalPublic !== 'number') {
+        return 'Please Enter Total Public Number'
+    } 
+    else {
+        let BusCap = 50;
+        let MicroBusCap = 11;
+        let PublicBusPrice = 250;
+
+        let Bus = TotalPublic % BusCap;
+        let MicroBus = Bus % MicroBusCap;
+        let totalCost = MicroBus * PublicBusPrice;
+        return totalCost;
+    }
+
+}
+// console.log(publicBusFare(50));
